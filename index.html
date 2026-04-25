@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalãoSync - Agendamento Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>✂️ SalãoSync</h1>
+        <p>Agendamento e Gestão Integrada</p>
+        
+        <a href="proprietario/index.html" target="_blank" class="btn-admin">🔒 Acessar Painel do Proprietário</a>
+    </header>
+
+    <main class="container">
+        <section class="card form-section">
+            <h2>📱 Novo Agendamento</h2>
+            <form id="agendamentoForm">
+                <div class="input-group">
+                    <label for="nome">Nome do Cliente:</label>
+                    <input type="text" id="nome" required placeholder="Ex: Maria Silva">
+                </div>
+                
+                <div class="input-group">
+                    <label for="servico">Serviço Desejado:</label>
+                    <select id="servico" required>
+                        <option value="">Selecione...</option>
+                        <option value="Corte de Cabelo">Corte de Cabelo</option>
+                        <option value="Coloração">Coloração (Gasta 1 tubo de Tinta)</option>
+                        <option value="Progressiva">Progressiva (Gasta 50ml de Produto)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="dataHora">Data e Hora:</label>
+                    <input type="datetime-local" id="dataHora" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Confirmar Agendamento</button>
+            </form>
+            <div id="mensagemSucesso" class="hidden alert-success">
+                Agendamento confirmado com sucesso!
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

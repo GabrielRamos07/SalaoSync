@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Proprietário - SalãoSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>💼 Dashboard do Proprietário</h1>
+        <p>Gestão de Estoque e Agenda Integrada</p>
+        
+        <a href="../index.html" class="btn-voltar">⬅️ Voltar para Visão do Cliente</a>
+    </header>
+
+    <main class="container dashboard-grid">
+        <section class="card">
+            <h3>📦 Controle de Estoque em Tempo Real</h3>
+            <ul id="listaEstoque">
+                <li>Tinta de Cabelo: <span id="estoqueTinta" class="badge">Carregando...</span></li>
+                <li>Progressiva: <span id="estoqueProgressiva" class="badge">Carregando...</span></li>
+            </ul>
+
+            <form id="reporEstoqueForm" class="repor-form">
+                <h4>Repor Produto</h4>
+                <select id="produtoRepor" required>
+                    <option value="">Escolha o produto...</option>
+                    <option value="tinta">Tinta (+5 tubos)</option>
+                    <option value="progressiva">Progressiva (+500 ml)</option>
+                </select>
+                <button type="submit" class="btn-secondary">Adicionar ao Estoque</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h3>📅 Agenda do Dia</h3>
+            <div id="listaAgendamentos" class="agendamentos-list">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
